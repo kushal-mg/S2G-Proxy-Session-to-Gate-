@@ -1,0 +1,15 @@
+# CLIENT BROWSER
+- CONNECTS WITH PROXY
+  - Custom Proxy
+    - Uses Root Certificate (MITMProxy)
+    - AES 256 GCM
+      - ENCRYPTION
+        - Encrypted Session IDs in cookies
+      - DECRYPTS USING HMAC + DEVICE FINGERPRINT AND MASTER KEY
+    - HMAC (K_Bind + Device Fingerprint)
+      - ENCRYPTION
+        - Encrypted Session IDs in cookies
+          - Sent Back to Proxy
+    - SENDS DECRYPTED SESSION ID FOR VALIDATION
+      - Website
+        - SESSION ID IS VALID SO WEBSITE OPENED

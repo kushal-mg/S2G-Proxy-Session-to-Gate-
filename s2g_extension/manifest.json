@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "S2G Proxy Controller",
+  "version": "1.0.0",
+  "description": "Easily toggle the S2G Zero-Trust Session Proxy and configure browser security.",
+  "permissions": [
+    "proxy",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

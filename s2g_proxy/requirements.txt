@@ -1,0 +1,7 @@
+mitmproxy
+PyQt6
+cryptography
+argon2-cffi
+psutil>=5.9.0
+pywin32
+requests

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>S2G Proxy Setup Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #1e1e1e;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #00e676;
+            font-size: 32px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 24px;
+            border: 1px solid #333;
+        }
+
+        h2 {
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: #00e676;
+            color: #000;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+
+        .step-content p {
+            margin-top: 5px;
+        }
+
+        code {
+            background: #2d2d2d;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #f48fb1;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>S2G Session Firewall Setup Guide</h1>
+        <p>Secure your browser traffic with zero-trust session encryption.</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>1. Start the Proxy Server</h2>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <p>Launch the **S2G Proxy Dashboard** application on your machine.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <p>Click "Start Security Proxy" in the dashboard. Ensure it says "Listening on 127.0.0.1:8080".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>2. Trust the Security Certificate</h2>
+            <p>Because the proxy encrypts deep traffic, you must tell your browser to trust its local certificate.</p>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <p>Open this extension popup and toggle the firewall **ON**.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <p>Navigate to <a href="http://mitm.it" target="_blank" style="color: #64b5f6;">mitm.it</a> in a new
+                        tab.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <p>Download the Windows certificate and install it to your **Trusted Root Certification
+                        Authorities** store.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <p>Restart your browser. You are now fully protected!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
